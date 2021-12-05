@@ -1,4 +1,6 @@
 from nba_api.stats.endpoints import commonteamyears
+##https://github.com/swar/nba_api/blob/master/docs/nba_api/stats/endpoints/commonteamyears.md
+
 from nba_api.stats.endpoints import teamgamelog
 from nba_api.stats.library.parameters import Season
 
