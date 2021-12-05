@@ -1,4 +1,5 @@
-
+from downloader import nba_scores_downloader
 
 if __name__ == "__main__":
-  print("this is a test")
+  response = nba_scores_downloader()
+  print(response)
