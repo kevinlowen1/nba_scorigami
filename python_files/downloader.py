@@ -16,6 +16,10 @@ def nba_team_games(teams):
     # print(teams[4].str.slice(start=2))
     # teams['MAX_YEAR_ABBR'] = teams.MAX_YEAR.str.slice(start=-2)
     # teams['MIN_YEAR_ABBR'] = teams.MIN_YEAR.str.slice(start=-2)
+    gamelog = pd.DataFrame(columns = ['Team_ID','Game_ID','GAME_DATE','MATCHUP','WL','W','L',
+                                    'W_PCT','MIN','FGM','FGA','FG_PCT','FG3M','FG3A','FG3_PCT',
+                                    'FTM','FTA','FT_PCT','OREB','DREB','REB','AST','STL','BLK',
+                                    'TOV','PF','PTS'])
 
     for row in teams.itertuples(index=False):
         team = row[teams.columns.get_loc('TEAM_ID')]
@@ -23,22 +27,12 @@ def nba_team_games(teams):
         max = row[teams.columns.get_loc('MAX_YEAR')]
 
         for x in range(min, max+1):
-            print(x)
             games = teamgamelog.TeamGameLog(season=x, season_type_all_star='Regular Season', team_id=team)
             df = games.get_data_frames()[0]
-            # print(df)
+            gamelog = gamelog.append(df,ignore_index=True)
 
-        # print()
-        # print(row[teams.columns.get_loc('TEAM_ID')], 
-        #         row[teams.columns.get_loc('MIN_YEAR')],
-        #         row[teams.columns.get_loc('MAX_YEAR')],
-        #         row[teams.columns.get_loc('MIN_YEAR_ABBR')],
-        #         row[teams.columns.get_loc('MAX_YEAR_ABBR')]
-        #          )
-
-    # games = teamgamelog.TeamGameLog(season='2021', season_type_all_star='Regular Season', team_id='1610612737')
-    # df = games.get_data_frames()[0]
-    # print(df)
+    games.to_csv('teamGameLog.csv')
+    
 
 if __name__ == "__main__":
 #    teams = nba_teams_list()
