@@ -28,7 +28,7 @@ def nba_team_games(teams):
         min = row[teams.columns.get_loc('MIN_YEAR')]
         max = row[teams.columns.get_loc('MAX_YEAR')]
 
-        for x in range(min, max+1):
+        for x in range(int(min)-1, int(max)+1):
             games = teamgamelog.TeamGameLog(season=x, season_type_all_star='Regular Season', team_id=team)
             df = games.get_data_frames()[0]
             gamelog = gamelog.append(df,ignore_index=True)
@@ -42,7 +42,8 @@ def nba_team_games(teams):
 
 if __name__ == "__main__":
     teams = nba_teams_list()
+    print(teams)
     # data = [['00','1610612737',2016,2017,'ATL'] , ['00','1610612738',2017,2019,'BOS']]
     # teams = pd.DataFrame(data, columns = ['LEAGUE_ID','TEAM_ID','MIN_YEAR','MAX_YEAR','ABBREVIATION'])
 
-    nba_team_games(teams)
+    # nba_team_games(teams)
