@@ -2,8 +2,10 @@
 
 from nba_api.stats.endpoints import commonteamyears
 from nba_api.stats.endpoints import teamgamelog
+from nba_api.stats.endpoints import boxscoresummaryv2
 # from nba_api.stats.library.parameters import Season
 import pandas as pd
+import time
 
 
 def nba_teams_list():
@@ -30,13 +32,16 @@ def nba_team_games(teams):
             games = teamgamelog.TeamGameLog(season=x, season_type_all_star='Regular Season', team_id=team)
             df = games.get_data_frames()[0]
             gamelog = gamelog.append(df,ignore_index=True)
+            
+            #delaying 5 seconds to avoid api throttle limits
+            time.sleep(5)
 
-    games.to_csv('teamGameLog.csv')
+        gamelog.to_csv(team+'_'+'teamGameLog.csv')
+
     
 
 if __name__ == "__main__":
-#    teams = nba_teams_list()
-
+    # teams = nba_teams_list()
     data = [['00','1610612737',2016,2017,'ATL'] , ['00','1610612738',2017,2019,'BOS']]
     teams = pd.DataFrame(data, columns = ['LEAGUE_ID','TEAM_ID','MIN_YEAR','MAX_YEAR','ABBREVIATION'])
 
