@@ -28,7 +28,7 @@ def nba_team_games(teams):
         min = row[teams.columns.get_loc('MIN_YEAR')]
         max = row[teams.columns.get_loc('MAX_YEAR')]
 
-        for x in range(min, max+1):
+        for x in range(min-1, max+1):
             games = teamgamelog.TeamGameLog(season=x, season_type_all_star='Regular Season', team_id=team)
             df = games.get_data_frames()[0]
             gamelog = gamelog.append(df,ignore_index=True)
