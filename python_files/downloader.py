@@ -34,16 +34,16 @@ def nba_team_games(teams):
             gamelog = gamelog.append(df,ignore_index=True)
             
             #delaying 5 seconds to avoid api throttle limits
-            time.sleep(5)
+            time.sleep(2)
 
-        gamelog.to_csv(team+'_'+'teamGameLog.csv')
+        gamelog.to_csv(str(team)+'_'+'teamGameLog.csv')
 
     
 
 if __name__ == "__main__":
     teams = nba_teams_list()
-    print(teams)
+    # print(teams)
     # data = [['00','1610612737',2016,2017,'ATL'] , ['00','1610612738',2017,2019,'BOS']]
     # teams = pd.DataFrame(data, columns = ['LEAGUE_ID','TEAM_ID','MIN_YEAR','MAX_YEAR','ABBREVIATION'])
 
-    # nba_team_games(teams)
+    nba_team_games(teams)
