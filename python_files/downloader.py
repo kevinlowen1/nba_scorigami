@@ -41,8 +41,8 @@ def nba_team_games(teams):
     
 
 if __name__ == "__main__":
-    # teams = nba_teams_list()
-    data = [['00','1610612737',2016,2017,'ATL'] , ['00','1610612738',2017,2019,'BOS']]
-    teams = pd.DataFrame(data, columns = ['LEAGUE_ID','TEAM_ID','MIN_YEAR','MAX_YEAR','ABBREVIATION'])
+    teams = nba_teams_list()
+    # data = [['00','1610612737',2016,2017,'ATL'] , ['00','1610612738',2017,2019,'BOS']]
+    # teams = pd.DataFrame(data, columns = ['LEAGUE_ID','TEAM_ID','MIN_YEAR','MAX_YEAR','ABBREVIATION'])
 
     nba_team_games(teams)
