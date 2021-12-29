@@ -28,19 +28,40 @@ def nba_team_games(teams):
         min = row[teams.columns.get_loc('MIN_YEAR')]
         max = row[teams.columns.get_loc('MAX_YEAR')]
 
+        #logging and printing
+        f = open("log.txt", "a")
+        f.write("starting: " + str(team) + "\n")
+        f.write("minimum: " + str(min) + "\n")
+        f.write("maximum: " + str(max) + "\n")
+        f.close()
+        print('starting: ' + str(team))
+        print('minimum year: ' + str(min))
+        print('maximum year: ' + str(max))
+
         for x in range(int(min)-1, int(max)+1):
+            print(x)
+
             games = teamgamelog.TeamGameLog(season=x, season_type_all_star='Regular Season', team_id=team)
             df = games.get_data_frames()[0]
             gamelog = gamelog.append(df,ignore_index=True)
             
-            #delaying 5 seconds to avoid api throttle limits
-            time.sleep(2)
+            #delaying 10 seconds to avoid api throttle limits
+            time.sleep(10)
 
         gamelog.to_csv(str(team)+'_'+'teamGameLog.csv')
-
+        
+        #logging and printing
+        print('finishing team: ' + str(team))
+        f = open("log.txt", "a")
+        f.write('finishing team: ' + str(team) + "\n")
+        f.close()
     
 
 if __name__ == "__main__":
+    f = open("log.txt", "w")
+    f.write("starting log" + "\n")
+    f.close()
+
     teams = nba_teams_list()
     # print(teams)
     # data = [['00','1610612737',2016,2017,'ATL'] , ['00','1610612738',2017,2019,'BOS']]
