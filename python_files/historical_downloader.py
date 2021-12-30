@@ -9,6 +9,11 @@ import time
 
 
 def nba_teams_list():
+    #logging and printing
+    f = open("log.txt", "a")
+    f.write("starting team list function\n")
+    f.close()
+
     teams = commonteamyears.CommonTeamYears(league_id='00')
     df = teams.get_data_frames()[0]
     print(df)
