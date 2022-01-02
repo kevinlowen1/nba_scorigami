@@ -5,12 +5,13 @@ from nba_api.stats.endpoints import teamgamelog
 from nba_api.stats.endpoints import boxscoresummaryv2
 # from nba_api.stats.library.parameters import Season
 import pandas as pd
+from datetime import datetime
 import time
 
 
 def nba_teams_list():
     #logging and printing
-    f = open("log.txt", "a")
+    f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "a")
     f.write("starting team list function\n")
     f.close()
 
@@ -34,7 +35,7 @@ def nba_team_games(teams):
         max = row[teams.columns.get_loc('MAX_YEAR')]
 
         #logging and printing
-        f = open("log.txt", "a")
+        f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "a")
         f.write("starting: " + str(team) + "\n")
         f.write("minimum: " + str(min) + "\n")
         f.write("maximum: " + str(max) + "\n")
@@ -57,14 +58,14 @@ def nba_team_games(teams):
         
         #logging and printing
         print('finishing team: ' + str(team))
-        f = open("log.txt", "a")
+        f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "a")
         f.write('finishing team: ' + str(team) + "\n")
         f.close()
     
 
 if __name__ == "__main__":
-    f = open("log.txt", "w")
-    f.write("starting log" + "\n")
+    f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "w")
+    f.write("starting historical_downloader at: " + str(datetime.now()) + "\n")
     f.close()
 
     teams = nba_teams_list()

@@ -1,1 +1,8 @@
 finishing team: 1610610025
+starting mysql_uploader at: 2022-01-01 21:56:01.871106
+starting mysql_table_creator_scores_historical
+created table for raw table scores in mysql db.
+starting creation of table for raw scores without extra fields.
+created table for raw table scores in mysql db without extra fields.
+created table for distinct games.
+starting mysql_inserter at: 2022-01-01 21:56:02.014876
