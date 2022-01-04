@@ -6,3 +6,88 @@ starting creation of table for raw scores without extra fields.
 created table for raw table scores in mysql db without extra fields.
 created table for distinct games.
 starting mysql_inserter at: 2022-01-01 21:56:02.014876
+starting mysql_uploader at: 2022-01-03 19:35:23.924127
+starting mysql_uploader at: 2022-01-03 19:36:19.250582
+starting mysql_table_creator_scores_historical
+created table for raw table scores in mysql db.
+starting creation of table for raw scores without extra fields.
+created table for raw table scores in mysql db without extra fields.
+created table for distinct games.
+starting mysql_inserter at: 2022-01-03 19:36:19.288522
+starting mysql_inserter at: 2022-01-03 19:36:34.455219
+starting mysql_inserter at: 2022-01-03 19:36:51.065124
+starting mysql_inserter at: 2022-01-03 19:37:04.655806
+starting mysql_inserter at: 2022-01-03 19:37:17.228201
+starting mysql_inserter at: 2022-01-03 19:37:31.551502
+starting mysql_inserter at: 2022-01-03 19:37:44.097066
+starting mysql_inserter at: 2022-01-03 19:37:56.762361
+starting mysql_inserter at: 2022-01-03 19:38:11.218228
+starting mysql_inserter at: 2022-01-03 19:38:24.763493
+starting mysql_inserter at: 2022-01-03 19:38:37.836618
+starting mysql_inserter at: 2022-01-03 19:38:51.017943
+starting mysql_inserter at: 2022-01-03 19:39:03.650295
+starting mysql_inserter at: 2022-01-03 19:39:16.426614
+starting mysql_inserter at: 2022-01-03 19:39:29.512646
+starting mysql_inserter at: 2022-01-03 19:39:42.460898
+starting mysql_inserter at: 2022-01-03 19:39:51.753886
+starting mysql_inserter at: 2022-01-03 19:40:01.201539
+starting mysql_inserter at: 2022-01-03 19:40:11.337336
+starting mysql_inserter at: 2022-01-03 19:40:21.509728
+starting mysql_inserter at: 2022-01-03 19:40:31.413198
+starting mysql_inserter at: 2022-01-03 19:40:41.058446
+starting mysql_inserter at: 2022-01-03 19:40:52.759294
+starting mysql_inserter at: 2022-01-03 19:41:03.975164
+starting mysql_inserter at: 2022-01-03 19:41:14.534870
+starting mysql_inserter at: 2022-01-03 19:41:24.287761
+starting mysql_inserter at: 2022-01-03 19:41:33.598346
+starting mysql_uploader at: 2022-01-03 20:08:38.540201
+starting mysql_table_creator_scores_historical
+created table for raw table scores in mysql db.
+starting creation of table for raw scores without extra fields.
+created table for raw table scores in mysql db without extra fields.
+created table for distinct games.
+starting mysql_inserter at: 2022-01-03 20:08:38.674984
+starting mysql_inserter at: 2022-01-03 20:08:52.188768
+starting mysql_inserter at: 2022-01-03 20:09:06.170393
+starting mysql_inserter at: 2022-01-03 20:09:21.649090
+starting mysql_inserter at: 2022-01-03 20:09:37.746796
+starting mysql_inserter at: 2022-01-03 20:09:51.918588
+starting mysql_inserter at: 2022-01-03 20:10:06.165759
+starting mysql_inserter at: 2022-01-03 20:10:22.072770
+starting mysql_inserter at: 2022-01-03 20:10:35.640031
+starting mysql_inserter at: 2022-01-03 20:10:49.153377
+starting mysql_inserter at: 2022-01-03 20:11:01.853527
+starting mysql_inserter at: 2022-01-03 20:11:14.907609
+starting mysql_inserter at: 2022-01-03 20:11:30.274986
+starting mysql_inserter at: 2022-01-03 20:11:43.281644
+starting mysql_inserter at: 2022-01-03 20:11:57.449600
+starting mysql_inserter at: 2022-01-03 20:12:10.035810
+starting mysql_inserter at: 2022-01-03 20:12:12.050084
+starting mysql_inserter at: 2022-01-03 20:12:14.956426
+starting mysql_inserter at: 2022-01-03 20:12:17.711512
+starting mysql_inserter at: 2022-01-03 20:12:20.903898
+starting mysql_inserter at: 2022-01-03 20:12:24.402790
+starting mysql_inserter at: 2022-01-03 20:12:28.072451
+starting mysql_inserter at: 2022-01-03 20:12:32.346109
+starting mysql_inserter at: 2022-01-03 20:12:37.031114
+starting mysql_inserter at: 2022-01-03 20:12:42.980581
+starting mysql_inserter at: 2022-01-03 20:12:44.577522
+starting mysql_inserter at: 2022-01-03 20:12:45.498046
+starting mysql_inserter at: 2022-01-03 20:12:52.562228
+starting mysql_inserter at: 2022-01-03 20:13:02.632092
+starting mysql_inserter at: 2022-01-03 20:13:12.880171
+starting mysql_inserter at: 2022-01-03 20:13:25.290785
+starting mysql_inserter at: 2022-01-03 20:13:40.393584
+starting mysql_inserter at: 2022-01-03 20:14:03.270927
+starting mysql_inserter at: 2022-01-03 20:14:27.961863
+starting mysql_inserter at: 2022-01-03 20:14:51.691341
+starting mysql_inserter at: 2022-01-03 20:15:16.967838
+starting mysql_inserter at: 2022-01-03 20:15:46.479551
+starting mysql_inserter at: 2022-01-03 20:16:19.491153
+starting mysql_inserter at: 2022-01-03 20:16:48.699351
+starting mysql_inserter at: 2022-01-03 20:17:17.152758
+starting mysql_inserter at: 2022-01-03 20:17:44.104073
+starting mysql_inserter at: 2022-01-03 20:18:13.431580
+starting mysql_inserter at: 2022-01-03 20:18:50.503677
+starting mysql_inserter at: 2022-01-03 20:19:08.716494
+starting mysql_inserter at: 2022-01-03 20:19:21.848452
