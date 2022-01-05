@@ -7,7 +7,7 @@ import csv
 import mariadb
 import os
 
-def mysql_table_creator_scores():
+def mariadb_table_creator_scores():
     #logging and printing
     f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "a")
     f.write("starting mysql_table_creator_scores_historical\n")
@@ -49,9 +49,13 @@ def mysql_table_creator_scores():
                         PF INT,
                         PTS INT)""")
 
+    mycursor.execute("""CREATE INDEX IF NOT EXISTS nba_scores_raw_team_id_index
+                        ON nba_scores_raw (TEAM_ID)""")
+
 
     f.write("created table for raw table scores in mysql db.\n")
     f.write("starting creation of table for raw scores without extra fields.\n")
+
     mycursor.execute('''CREATE TABLE IF NOT EXISTS nba_scores_raw_less_fields (Team_ID INT,
                                                     Game_ID INT,
                                                     GAME_DATE VARCHAR(255),
@@ -59,6 +63,9 @@ def mysql_table_creator_scores():
                                                     WL VARCHAR(1),
                                                     PTS INT)
                                                     ''')
+
+    mycursor.execute("""CREATE INDEX IF NOT EXISTS nba_scores_raw_less_fields_team_id_index
+                        ON nba_scores_raw_less_fields (TEAM_ID)""")
 
     f.write("created table for raw table scores in mysql db without extra fields.\n")
     mycursor.execute('''CREATE TABLE IF NOT EXISTS nba_scores_distinct_games (Game_ID INT,
@@ -75,21 +82,17 @@ def mysql_table_creator_scores():
     f.write("created table for distinct games.\n")
     f.close()
 
-def mysql_inserter(file):
+def mariadb_inserter(file):
     #logging and printing
     f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "a")
     f.write("starting mysql_inserter at: " + str(datetime.now()) + "\n")
     print("starting mysql_inserter for:" + file)
 
     game_log_pandas = pd.read_csv('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores\\'+file, sep=',', quotechar='"')
-    # game_log_pandas = pd.read_csv('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores\\1610610023_teamGameLog.csv', sep=',', quotechar='"')
     game_log_pandas = game_log_pandas.fillna(0)
     game_log_pandas = game_log_pandas.iloc[: , 1:]
     cols = ['Team_ID','Game_ID','W','L','MIN','FGM','FG3A','FGA','FG3M','FTM','FTA','OREB','DREB','REB','AST','STL','BLK','TOV','PF','PTS']
     game_log_pandas[cols] = game_log_pandas[cols].applymap(np.int64)
-
-    # print("here")
-    # print(game_log_pandas.columns[(game_log_pandas == 0.0).iloc[0]])
 
     conn = mariadb.connect(
         host=config.db_ip,
@@ -99,11 +102,8 @@ def mysql_inserter(file):
         port=config.db_port
     )
     mycursor = conn.cursor()
-
-    # Here, change your own path to dump the temp file
-    game_log_pandas.to_csv('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores_no_index\\'+file, index=False) 
-    # game_log_pandas.to_csv('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores_no_index\\1610610023_teamGameLog.csv', index=False)                                                       
-    # file = open('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores_no_index\\1610610023_teamGameLog.csv','r')                                                 
+    
+    game_log_pandas.to_csv('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores_no_index\\'+file, index=False)                                   
     filed = open('C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\game_scores_no_index\\'+file,'r')
     csv_data = csv.reader(filed)
 
@@ -126,6 +126,40 @@ def mysql_inserter(file):
     conn.close()
     f.close()
 
+def mariadb_less_fields():
+    #logging and printing
+    f = open("C:\\Users\\Kevin.DESKTOP-9D0VMK8\Documents\\Projects\\nba_scorigami\\logs\\log.txt", "a")
+    f.write("starting mariadb_less_fields at: " + str(datetime.now()) + "\n")
+    print("starting mariadb_less_fields")
+
+    conn = mariadb.connect(
+        host=config.db_ip,
+        user=config.db_username,
+        password=config.db_password,
+        database="nba",
+        port=config.db_port
+    )
+    mycursor = conn.cursor()
+
+    sql = '''INSERT INTO nba_scores_raw_less_fields (
+                Team_ID,
+                Game_ID,
+                GAME_DATE,
+                MATCHUP,
+                WL,
+                PTS )
+            SELECT Team_ID,
+                    Game_ID,
+                    GAME_DATE,
+                    MATCHUP,
+                    WL,
+                    PTS
+            FROM nba_scores_raw;'''
+
+    f.close()
+
+
+
 
 if __name__ == "__main__":
     #logging and printing
@@ -133,12 +167,18 @@ if __name__ == "__main__":
     f.write("starting mysql_uploader at: " + str(datetime.now()) + "\n")
     f.close()
 
-    mysql_table_creator_scores()
+    #create tables if they don't exist in the db
+    ##to-do, switch mysql  --> mariadb connector
+    mariadb_table_creator_scores()
 
+    # insert raw scores file by fiile
     directory = r'C:\\Users\\Kevin.DESKTOP-9D0VMK8\\Documents\\Projects\\nba_scorigami\\game_scores'
-
     for file in os.listdir(directory):
-        mysql_inserter(file)
+        mariadb_inserter(file)
+
+    #select  scores into separate table with less fields for ease of processing.
+    #to-do, need to finish coding this
+    mariadb_less_fields()
 
 
 
