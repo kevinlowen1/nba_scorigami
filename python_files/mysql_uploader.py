@@ -6,6 +6,7 @@ import numpy as np
 import csv
 import mariadb
 import os
+import sys
 
 def mariadb_table_creator_scores():
     #logging and printing
@@ -54,20 +55,7 @@ def mariadb_table_creator_scores():
 
 
     f.write("created table for raw table scores in mysql db.\n")
-    f.write("starting creation of table for raw scores without extra fields.\n")
-
-    mycursor.execute('''CREATE TABLE IF NOT EXISTS nba_scores_raw_less_fields (Team_ID INT,
-                                                    Game_ID INT,
-                                                    GAME_DATE VARCHAR(255),
-                                                    MATCHUP VARCHAR(255),
-                                                    WL VARCHAR(1),
-                                                    PTS INT)
-                                                    ''')
-
-    mycursor.execute("""CREATE INDEX IF NOT EXISTS nba_scores_raw_less_fields_team_id_index
-                        ON nba_scores_raw_less_fields (TEAM_ID)""")
-
-    f.write("created table for raw table scores in mysql db without extra fields.\n")
+    
     mycursor.execute('''CREATE TABLE IF NOT EXISTS nba_scores_distinct_games (Game_ID INT,
                                                     GAME_DATE VARCHAR(255),
                                                     HOME_TEAM VARCHAR(255),
@@ -132,6 +120,7 @@ def mariadb_less_fields():
     f.write("starting mariadb_less_fields at: " + str(datetime.now()) + "\n")
     print("starting mariadb_less_fields")
 
+    
     conn = mariadb.connect(
         host=config.db_ip,
         user=config.db_username,
@@ -139,22 +128,38 @@ def mariadb_less_fields():
         database="nba",
         port=config.db_port
     )
-    mycursor = conn.cursor()
+    cur = conn.cursor() 
 
-    sql = '''INSERT INTO nba_scores_raw_less_fields (
-                Team_ID,
-                Game_ID,
-                GAME_DATE,
-                MATCHUP,
-                WL,
-                PTS )
-            SELECT Team_ID,
-                    Game_ID,
-                    GAME_DATE,
-                    MATCHUP,
-                    WL,
-                    PTS
-            FROM nba_scores_raw;'''
+    # Connect to MariaDB Platform
+    try:
+        cur.execute("""CREATE
+            VIEW IF NOT EXISTS nba_scores_raw_less_fields
+            AS  SELECT DISTINCT Team_ID,
+                            Game_ID,
+                            GAME_DATE,
+                            MATCHUP,
+                            WL,
+                            PTS
+            FROM nba_scores_raw""")
+    except mariadb.Error as e:
+        print(f"Error connecting to MariaDB Platform: {e}")
+        sys.exit(1)
+
+
+    # sql = '''INSERT INTO nba_scores_raw_less_fields (
+    #             Team_ID,
+    #             Game_ID,
+    #             GAME_DATE,
+    #             MATCHUP,
+    #             WL,
+    #             PTS )
+    #         SELECT DISTINCT Team_ID,
+    #                         Game_ID,
+    #                         GAME_DATE,
+    #                         MATCHUP,
+    #                         WL,
+    #                         PTS
+    #         FROM nba_scores_raw;'''
 
     f.close()
 
@@ -168,7 +173,7 @@ if __name__ == "__main__":
     f.close()
 
     #create tables if they don't exist in the db
-    ##to-do, switch mysql  --> mariadb connector
+    #to-do, switch mysql  --> mariadb connector
     mariadb_table_creator_scores()
 
     # insert raw scores file by fiile
