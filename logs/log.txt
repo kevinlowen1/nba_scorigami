@@ -1,14 +1,269 @@
-starting historical_downloader at: 2022-01-22 11:37:55.688087
+starting historical_downloader at: 2022-01-23 20:14:55.664087
+starting team list function
 starting: 1610612737
-minimum: 2016
-maximum: 2017
+minimum: 1949
+maximum: 2021
+in for loop for: 1610612737, doing year: 1949
+in for loop for: 1610612737, doing year: 1950
+in for loop for: 1610612737, doing year: 1951
+in for loop for: 1610612737, doing year: 1952
+in for loop for: 1610612737, doing year: 1953
+in for loop for: 1610612737, doing year: 1954
+in for loop for: 1610612737, doing year: 1955
+in for loop for: 1610612737, doing year: 1956
+in for loop for: 1610612737, doing year: 1957
+in for loop for: 1610612737, doing year: 1958
+in for loop for: 1610612737, doing year: 1959
+in for loop for: 1610612737, doing year: 1960
+in for loop for: 1610612737, doing year: 1961
+in for loop for: 1610612737, doing year: 1962
+in for loop for: 1610612737, doing year: 1963
+in for loop for: 1610612737, doing year: 1964
+in for loop for: 1610612737, doing year: 1965
+in for loop for: 1610612737, doing year: 1966
+in for loop for: 1610612737, doing year: 1967
+in for loop for: 1610612737, doing year: 1968
+in for loop for: 1610612737, doing year: 1969
+in for loop for: 1610612737, doing year: 1970
+in for loop for: 1610612737, doing year: 1971
+in for loop for: 1610612737, doing year: 1972
+in for loop for: 1610612737, doing year: 1973
+in for loop for: 1610612737, doing year: 1974
+in for loop for: 1610612737, doing year: 1975
+in for loop for: 1610612737, doing year: 1976
+in for loop for: 1610612737, doing year: 1977
+in for loop for: 1610612737, doing year: 1978
+in for loop for: 1610612737, doing year: 1979
+in for loop for: 1610612737, doing year: 1980
+in for loop for: 1610612737, doing year: 1981
+in for loop for: 1610612737, doing year: 1982
+in for loop for: 1610612737, doing year: 1983
+in for loop for: 1610612737, doing year: 1984
+in for loop for: 1610612737, doing year: 1985
+in for loop for: 1610612737, doing year: 1986
+in for loop for: 1610612737, doing year: 1987
+in for loop for: 1610612737, doing year: 1988
+in for loop for: 1610612737, doing year: 1989
+in for loop for: 1610612737, doing year: 1990
+in for loop for: 1610612737, doing year: 1991
+in for loop for: 1610612737, doing year: 1992
+in for loop for: 1610612737, doing year: 1993
+in for loop for: 1610612737, doing year: 1994
+in for loop for: 1610612737, doing year: 1995
+in for loop for: 1610612737, doing year: 1996
+in for loop for: 1610612737, doing year: 1997
+in for loop for: 1610612737, doing year: 1998
+in for loop for: 1610612737, doing year: 1999
+in for loop for: 1610612737, doing year: 2000
+in for loop for: 1610612737, doing year: 2001
+in for loop for: 1610612737, doing year: 2002
+in for loop for: 1610612737, doing year: 2003
+in for loop for: 1610612737, doing year: 2004
+in for loop for: 1610612737, doing year: 2005
+in for loop for: 1610612737, doing year: 2006
+in for loop for: 1610612737, doing year: 2007
+in for loop for: 1610612737, doing year: 2008
+in for loop for: 1610612737, doing year: 2009
+in for loop for: 1610612737, doing year: 2010
+in for loop for: 1610612737, doing year: 2011
+in for loop for: 1610612737, doing year: 2012
+in for loop for: 1610612737, doing year: 2013
+in for loop for: 1610612737, doing year: 2014
+in for loop for: 1610612737, doing year: 2015
 in for loop for: 1610612737, doing year: 2016
 in for loop for: 1610612737, doing year: 2017
+in for loop for: 1610612737, doing year: 2018
+in for loop for: 1610612737, doing year: 2019
+in for loop for: 1610612737, doing year: 2020
+in for loop for: 1610612737, doing year: 2021
 finishing team: 1610612737
 starting: 1610612738
-minimum: 2017
-maximum: 2019
+minimum: 1946
+maximum: 2021
+in for loop for: 1610612738, doing year: 1946
+in for loop for: 1610612738, doing year: 1947
+in for loop for: 1610612738, doing year: 1948
+in for loop for: 1610612738, doing year: 1949
+in for loop for: 1610612738, doing year: 1950
+in for loop for: 1610612738, doing year: 1951
+in for loop for: 1610612738, doing year: 1952
+in for loop for: 1610612738, doing year: 1953
+in for loop for: 1610612738, doing year: 1954
+in for loop for: 1610612738, doing year: 1955
+in for loop for: 1610612738, doing year: 1956
+in for loop for: 1610612738, doing year: 1957
+in for loop for: 1610612738, doing year: 1958
+in for loop for: 1610612738, doing year: 1959
+in for loop for: 1610612738, doing year: 1960
+in for loop for: 1610612738, doing year: 1961
+in for loop for: 1610612738, doing year: 1962
+in for loop for: 1610612738, doing year: 1963
+in for loop for: 1610612738, doing year: 1964
+in for loop for: 1610612738, doing year: 1965
+in for loop for: 1610612738, doing year: 1966
+in for loop for: 1610612738, doing year: 1967
+in for loop for: 1610612738, doing year: 1968
+in for loop for: 1610612738, doing year: 1969
+in for loop for: 1610612738, doing year: 1970
+in for loop for: 1610612738, doing year: 1971
+in for loop for: 1610612738, doing year: 1972
+in for loop for: 1610612738, doing year: 1973
+in for loop for: 1610612738, doing year: 1974
+in for loop for: 1610612738, doing year: 1975
+in for loop for: 1610612738, doing year: 1976
+in for loop for: 1610612738, doing year: 1977
+in for loop for: 1610612738, doing year: 1978
+in for loop for: 1610612738, doing year: 1979
+in for loop for: 1610612738, doing year: 1980
+in for loop for: 1610612738, doing year: 1981
+in for loop for: 1610612738, doing year: 1982
+in for loop for: 1610612738, doing year: 1983
+in for loop for: 1610612738, doing year: 1984
+in for loop for: 1610612738, doing year: 1985
+in for loop for: 1610612738, doing year: 1986
+in for loop for: 1610612738, doing year: 1987
+in for loop for: 1610612738, doing year: 1988
+in for loop for: 1610612738, doing year: 1989
+in for loop for: 1610612738, doing year: 1990
+in for loop for: 1610612738, doing year: 1991
+in for loop for: 1610612738, doing year: 1992
+in for loop for: 1610612738, doing year: 1993
+in for loop for: 1610612738, doing year: 1994
+in for loop for: 1610612738, doing year: 1995
+in for loop for: 1610612738, doing year: 1996
+in for loop for: 1610612738, doing year: 1997
+in for loop for: 1610612738, doing year: 1998
+in for loop for: 1610612738, doing year: 1999
+in for loop for: 1610612738, doing year: 2000
+in for loop for: 1610612738, doing year: 2001
+in for loop for: 1610612738, doing year: 2002
+in for loop for: 1610612738, doing year: 2003
+in for loop for: 1610612738, doing year: 2004
+in for loop for: 1610612738, doing year: 2005
+in for loop for: 1610612738, doing year: 2006
+in for loop for: 1610612738, doing year: 2007
+in for loop for: 1610612738, doing year: 2008
+in for loop for: 1610612738, doing year: 2009
+in for loop for: 1610612738, doing year: 2010
+in for loop for: 1610612738, doing year: 2011
+in for loop for: 1610612738, doing year: 2012
+in for loop for: 1610612738, doing year: 2013
+in for loop for: 1610612738, doing year: 2014
+in for loop for: 1610612738, doing year: 2015
+in for loop for: 1610612738, doing year: 2016
 in for loop for: 1610612738, doing year: 2017
 in for loop for: 1610612738, doing year: 2018
 in for loop for: 1610612738, doing year: 2019
+in for loop for: 1610612738, doing year: 2020
+in for loop for: 1610612738, doing year: 2021
 finishing team: 1610612738
+starting: 1610612739
+minimum: 1970
+maximum: 2021
+in for loop for: 1610612739, doing year: 1970
+in for loop for: 1610612739, doing year: 1971
+in for loop for: 1610612739, doing year: 1972
+in for loop for: 1610612739, doing year: 1973
+in for loop for: 1610612739, doing year: 1974
+in for loop for: 1610612739, doing year: 1975
+in for loop for: 1610612739, doing year: 1976
+in for loop for: 1610612739, doing year: 1977
+in for loop for: 1610612739, doing year: 1978
+in for loop for: 1610612739, doing year: 1979
+in for loop for: 1610612739, doing year: 1980
+in for loop for: 1610612739, doing year: 1981
+in for loop for: 1610612739, doing year: 1982
+in for loop for: 1610612739, doing year: 1983
+in for loop for: 1610612739, doing year: 1984
+in for loop for: 1610612739, doing year: 1985
+in for loop for: 1610612739, doing year: 1986
+in for loop for: 1610612739, doing year: 1987
+in for loop for: 1610612739, doing year: 1988
+in for loop for: 1610612739, doing year: 1989
+in for loop for: 1610612739, doing year: 1990
+in for loop for: 1610612739, doing year: 1991
+in for loop for: 1610612739, doing year: 1992
+in for loop for: 1610612739, doing year: 1993
+in for loop for: 1610612739, doing year: 1994
+in for loop for: 1610612739, doing year: 1995
+in for loop for: 1610612739, doing year: 1996
+in for loop for: 1610612739, doing year: 1997
+in for loop for: 1610612739, doing year: 1998
+in for loop for: 1610612739, doing year: 1999
+in for loop for: 1610612739, doing year: 2000
+in for loop for: 1610612739, doing year: 2001
+in for loop for: 1610612739, doing year: 2002
+in for loop for: 1610612739, doing year: 2003
+in for loop for: 1610612739, doing year: 2004
+in for loop for: 1610612739, doing year: 2005
+in for loop for: 1610612739, doing year: 2006
+in for loop for: 1610612739, doing year: 2007
+in for loop for: 1610612739, doing year: 2008
+in for loop for: 1610612739, doing year: 2009
+in for loop for: 1610612739, doing year: 2010
+in for loop for: 1610612739, doing year: 2011
+in for loop for: 1610612739, doing year: 2012
+in for loop for: 1610612739, doing year: 2013
+in for loop for: 1610612739, doing year: 2014
+in for loop for: 1610612739, doing year: 2015
+in for loop for: 1610612739, doing year: 2016
+in for loop for: 1610612739, doing year: 2017
+in for loop for: 1610612739, doing year: 2018
+in for loop for: 1610612739, doing year: 2019
+in for loop for: 1610612739, doing year: 2020
+in for loop for: 1610612739, doing year: 2021
+finishing team: 1610612739
+starting: 1610612740
+minimum: 2002
+maximum: 2021
+in for loop for: 1610612740, doing year: 2002
+in for loop for: 1610612740, doing year: 2003
+in for loop for: 1610612740, doing year: 2004
+in for loop for: 1610612740, doing year: 2005
+in for loop for: 1610612740, doing year: 2006
+in for loop for: 1610612740, doing year: 2007
+in for loop for: 1610612740, doing year: 2008
+in for loop for: 1610612740, doing year: 2009
+in for loop for: 1610612740, doing year: 2010
+in for loop for: 1610612740, doing year: 2011
+in for loop for: 1610612740, doing year: 2012
+in for loop for: 1610612740, doing year: 2013
+in for loop for: 1610612740, doing year: 2014
+in for loop for: 1610612740, doing year: 2015
+in for loop for: 1610612740, doing year: 2016
+in for loop for: 1610612740, doing year: 2017
+in for loop for: 1610612740, doing year: 2018
+in for loop for: 1610612740, doing year: 2019
+in for loop for: 1610612740, doing year: 2020
+in for loop for: 1610612740, doing year: 2021
+finishing team: 1610612740
+starting: 1610612741
+minimum: 1966
+maximum: 2021
+in for loop for: 1610612741, doing year: 1966
+in for loop for: 1610612741, doing year: 1967
+in for loop for: 1610612741, doing year: 1968
+in for loop for: 1610612741, doing year: 1969
+in for loop for: 1610612741, doing year: 1970
+in for loop for: 1610612741, doing year: 1971
+in for loop for: 1610612741, doing year: 1972
+in for loop for: 1610612741, doing year: 1973
+in for loop for: 1610612741, doing year: 1974
+in for loop for: 1610612741, doing year: 1975
+in for loop for: 1610612741, doing year: 1976
+in for loop for: 1610612741, doing year: 1977
+in for loop for: 1610612741, doing year: 1978
+in for loop for: 1610612741, doing year: 1979
+in for loop for: 1610612741, doing year: 1980
+in for loop for: 1610612741, doing year: 1981
+in for loop for: 1610612741, doing year: 1982
+in for loop for: 1610612741, doing year: 1983
+in for loop for: 1610612741, doing year: 1984
+in for loop for: 1610612741, doing year: 1985
+in for loop for: 1610612741, doing year: 1986
+in for loop for: 1610612741, doing year: 1987
+in for loop for: 1610612741, doing year: 1988
+in for loop for: 1610612741, doing year: 1989
+in for loop for: 1610612741, doing year: 1990
+in for loop for: 1610612741, doing year: 1991
+in for loop for: 1610612741, doing year: 1992
